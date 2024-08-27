@@ -1,0 +1,7 @@
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."

@@ -72,8 +72,8 @@ class MainWindow(QMainWindow):
         self.submit_button_ai_EARS.clicked.connect(self.process_input_ai_EARS)
         self.submit_button_ai_ECSS = QPushButton("Submit to ECSS AI Module", self)
         self.submit_button_ai_ECSS.clicked.connect(self.process_input_ai_ECSS)
-        self.submit_button_ai_ISO29148 = QPushButton("Submit to ISO 29148 AI Module", self)
-        self.submit_button_ai_ISO29148.clicked.connect(self.process_input_ai_ISO29148)
+        #self.submit_button_ai_ISO29148 = QPushButton("Submit to ISO 29148 AI Module", self)
+        #self.submit_button_ai_ISO29148.clicked.connect(self.process_input_ai_ISO29148)
 
         self.loading_bar = QProgressBar(self)
         self.loading_bar.setRange(0, 0)  # Indeterminate state
@@ -149,15 +149,15 @@ class MainWindow(QMainWindow):
         self.loading_bar.setVisible(True)
         QTimer.singleShot(100, lambda: self.run_script_individual("AIModule_ECSS.py"))
 
-    def process_input_ai_ISO29148(self):
-        user_input = self.input_field.text()
+    #def process_input_ai_ISO29148(self):
+     #   user_input = self.input_field.text()
 
-        if not user_input:
-            self.result2_text.setPlainText("No input provided")
-            return
+     #   if not user_input:
+     #       self.result2_text.setPlainText("No input provided")
+     #       return
 
-        self.loading_bar.setVisible(True)
-        QTimer.singleShot(100, lambda: self.run_script_individual("AIModule_ISO29148.py"))        
+     #   self.loading_bar.setVisible(True)
+     #   QTimer.singleShot(100, lambda: self.run_script_individual("AIModule_ISO29148.py"))        
 
     def run_script_individual(self, script_name):
         user_input = self.input_field.text()
@@ -170,8 +170,8 @@ class MainWindow(QMainWindow):
             self.result2_text.setPlainText(result.stdout.strip())
         elif script_name == "AIModule_ECSS.py":
             self.result2_text.setPlainText(result.stdout.strip())
-        elif script_name == "AIModule_ISO29148.py":
-            self.result2_text.setPlainText(result.stdout.strip())
+        #elif script_name == "AIModule_ISO29148.py":
+        #    self.result2_text.setPlainText(result.stdout.strip())
 
         self.loading_bar.setVisible(False)
 
