@@ -13397,3 +13397,899 @@ error_code=rate_limit_exceeded error_message='Rate limit reached for gpt-4 in or
 Error: Rate limit reached for gpt-4 in organization org-97DQh28IP54QAlraI0uZLyeo on tokens per min (TPM): Limit 10000, Used 9654, Requested 1047. Please try again in 4.206s. Visit https://platform.openai.com/account/rate-limits to learn more.
 
 
+2024-09-02 18:53:20
+Prompt: Using the EARS template defined by the BNF grammar below, generate the <requirement> from the unformatted requirement: "While there is no conflict, the satellite would communicate with the groundstation" in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the examples of good and bad requirements as a guideline when generating the new requirement. 
+<requirement> ::= <ubiquitous> | <event-driven> | <state-driven> | <optional> | <unwanted>, 
+<ubiquitous> ::= “The system shall <action>.”, 
+<event-driven> ::= “When <event>, the system shall <action>.”, 
+<state-driven> ::= “While <state>, the system shall <action>.”, 
+<optional> ::= “The system shall <action>.”, 
+<unwanted> ::= “The system shall <preventive-action> to <unwanted-outcome>.”, 
+<action> ::= <verb-phrase>, 
+<event> ::= <noun-phrase>, 
+<state> ::= <noun-phrase>, 
+<preventive-action> ::= <verb-phrase>, 
+<unwanted-outcome> ::= <noun-phrase>, 
+<verb-phrase> ::= “a verb phrase”, 
+<noun-phrase> ::= “a noun phrase”, 
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Please consider the above examples of bad requirements while generating the new requirement. The new requirement should follow the patterns of the good examples and avoid the pitfalls and errors seen in these examples. Do not default to providing an answer if unsure; instead explicitly state if the requirement does not fit any provided category and assign it to <non-requirement>.
+
+
+2024-09-02 18:53:23
+Response: <state-driven> "While there is no conflict, the system shall enable communication between the satellite and the ground station."
+
+
+2024-09-02 18:53:38
+Prompt: Using the ECSS Technical Specification (TS) requirement template defined below, generate the british english <requirement> from the unformatted requirement: "While there is no conflict, the satellite would communicate with the groundstation" in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the example of good and bad requirements as a guideline when generating the new requirement. Do not use any prohibited terms listed in the prompt under any circumstances.  
+
+Definitions of requirement types:
+<requirement> ::= <Functional> | <Mission> | <Interface> | <Environmental> | <Operational> | <Human Factor> | <(Integrated) Logistics Support Requirements> | <Physical> | <Product Assurance (PA) Induced> | <Configuration> | <Design> | <verification>, 
+<Functional> ::= Requirements that define what activity or action the product shall perform, in order to conform to the needs / mission statement or requirements of the user.
+<Mission> ::= Requirements related to a task, a function, a constraint, or an action induced by the mission scenario.
+<Interface> ::= Requirements related to the interconnection or relationship characteristics between the product and other items - this includes different types of interfaces (e.g. physical, thermal, electrical, and protocol).
+<Environmental> ::= Requirements related to a product or the system environment during its life cycle; this includes the natural environments (e.g. planet interactions, free space and dust) and induced environments (e.g. radiation, electromagnetic, heat, vibration and contamination).
+<Operational> ::= Requirements related to the system operability - this includes operational profiles and the utilization environment and events to which the product shall respond (e.g. autonomy, control and contingency) for each operational profile.
+<Human Factor> ::= Requirements related to a product or a process adapted to human capabilities considering basic human characteristics - this includes basic human capability characteristics such as 1. Decision making; 2. Muscular Strength, coordination and craftsmanship; 3. body dimensions; 4. perception and judgement; 5. workload; and 6. comfort and freedom from environmental stress.
+<(Integrated) Logistics Support Requirements> ::= Requirements related to the (integrated) logistics support considerations to ensure the effective and economical support of a system for its life cycle - such as 1. the constraints concerning the maintenance (e.g. minimum periodicity, intervention duration, infrastructure, tooling, intervention modes); 2. packaging, transportation, handling and storage; 3. training of product users; 4. user documentation; 5. implementation of the product at the user site; and 6. reuse of the product or its elements.
+<Physical> ::= Requirements that establish the boundary conditions to ensure physical compatibility and that are not defined by the interface requirements, design and construction requirements, or referenced drawings - This includes requirements related to mechanical characteristics, electrical isolation and chemical composition (e.g. weight and dimensional limits).
+<Product Assurance (PA) Induced> ::= Requirements related to the relevant activities covered by the product assurance - This can include subjects such as 1. Reliability, availability, maintainability; 2. Safety; and 3. Quality assurance.
+<Configuration> ::= Requirements related to the composition of the product or its organization.
+<Design> ::= Requirements related to the imposed design and construction standards such as design standards, selection list of components or materials, interchangeability, safety or margins.
+<verification> ::= Requirements related to the imposed verification methods, such as compliance to verification standards, usage of test methods or facilities.
+
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Examples of how each rerquirement type might look. These requirements are examples only and should not be used except for when the user input is extremely similar:
+<Functional> Example: “The product shall analyze the surface of Mars and transmit the data so that it is at the disposal of the scientific community.”
+<Mission> Example: “The product shall be designed to be put in its final position after a transfer duration shorter than 90 days.”
+<Interface> Example: “The product shall dialogue with the ground segment using telemetry.”
+<Environmental> Example: “The product shall operate within the temperature range from 30 ºC to 50 ºC.”
+<Operational> Example: “The product shall be designed to accept control of the viewing function from the ground segment.”
+<Human Factor> Example: “The product shall display the information with no more than two windows on the screen at the same time.”
+<(Integrated) Logistics Support Requirements> Example: “The product shall be designed to be installed at the customer site within two days.”
+<Physical> Example: “The product shall have a mass of (30 +/- 0.1) kg.”
+<Product Assurance (PA) Induced> Example: “While testing, the system shall record all anomalies.”
+<Configuration> Example: “The product shall have 7 power modules with 2 power outlets per engine.”
+<Design> Example: “The receiver shall use a phase-lock loop (PLL).”
+<verification> Example: “The thermal balance test shall be performed using solar illumination.”
+<non-requirement> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Crucially, do not use any of the following prohibited terms in your response under any circumstances: 1. “and/or”, 2. “etc.”, 3. “goal”, 4. “shall be included but not limited to”, 5. “relevant”, 6. “necessary”, 7. “appropriate”, 8. “as far as possible”, 9. “optimize”, 10. “minimize”, 11. “maximize”, 12. “typical”, 13. “rapid”, 14. “user-friendly”, 15. “easy”, 16. “sufficient”, 17. “enough”, 18. “suitable”, 19. “satisfactory”, 20. “adequate”, 21. “quick”, 22. “first rate”, 23. “best possible”, 24. “great”, 25. “small”, 26. “large”, 27. “state of the art”, and 28. “state-of-the-art” - if . Ensure that your response does not include any of these terms. Explicitly state if the requirement does not fit into any of the provided categories.
+
+
+2024-09-02 18:53:40
+Response: <Operational> "The satellite shall establish communication with the ground station in the absence of conflicts."
+
+
+2024-09-02 18:55:40
+Prompt: Using the EARS template defined by the BNF grammar below, generate the <requirement> from the unformatted requirement: "The Boom shall extend. The Boom shall extend." in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the examples of good and bad requirements as a guideline when generating the new requirement. 
+<requirement> ::= <ubiquitous> | <event-driven> | <state-driven> | <optional> | <unwanted>, 
+<ubiquitous> ::= “The system shall <action>.”, 
+<event-driven> ::= “When <event>, the system shall <action>.”, 
+<state-driven> ::= “While <state>, the system shall <action>.”, 
+<optional> ::= “The system shall <action>.”, 
+<unwanted> ::= “The system shall <preventive-action> to <unwanted-outcome>.”, 
+<action> ::= <verb-phrase>, 
+<event> ::= <noun-phrase>, 
+<state> ::= <noun-phrase>, 
+<preventive-action> ::= <verb-phrase>, 
+<unwanted-outcome> ::= <noun-phrase>, 
+<verb-phrase> ::= “a verb phrase”, 
+<noun-phrase> ::= “a noun phrase”, 
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Please consider the above examples of bad requirements while generating the new requirement. The new requirement should follow the patterns of the good examples and avoid the pitfalls and errors seen in these examples. Do not default to providing an answer if unsure; instead explicitly state if the requirement does not fit any provided category and assign it to <non-requirement>.
+
+
+2024-09-02 18:55:41
+Response: <ubiquitous> "The system shall extend the Boom."
+
+
+2024-09-02 18:56:05
+Prompt: Using the ECSS Technical Specification (TS) requirement template defined below, generate the british english <requirement> from the unformatted requirement: "The Boom shall extend. The Boom shall extend." in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the example of good and bad requirements as a guideline when generating the new requirement. Do not use any prohibited terms listed in the prompt under any circumstances.  
+
+Definitions of requirement types:
+<requirement> ::= <Functional> | <Mission> | <Interface> | <Environmental> | <Operational> | <Human Factor> | <(Integrated) Logistics Support Requirements> | <Physical> | <Product Assurance (PA) Induced> | <Configuration> | <Design> | <verification>, 
+<Functional> ::= Requirements that define what activity or action the product shall perform, in order to conform to the needs / mission statement or requirements of the user.
+<Mission> ::= Requirements related to a task, a function, a constraint, or an action induced by the mission scenario.
+<Interface> ::= Requirements related to the interconnection or relationship characteristics between the product and other items - this includes different types of interfaces (e.g. physical, thermal, electrical, and protocol).
+<Environmental> ::= Requirements related to a product or the system environment during its life cycle; this includes the natural environments (e.g. planet interactions, free space and dust) and induced environments (e.g. radiation, electromagnetic, heat, vibration and contamination).
+<Operational> ::= Requirements related to the system operability - this includes operational profiles and the utilization environment and events to which the product shall respond (e.g. autonomy, control and contingency) for each operational profile.
+<Human Factor> ::= Requirements related to a product or a process adapted to human capabilities considering basic human characteristics - this includes basic human capability characteristics such as 1. Decision making; 2. Muscular Strength, coordination and craftsmanship; 3. body dimensions; 4. perception and judgement; 5. workload; and 6. comfort and freedom from environmental stress.
+<(Integrated) Logistics Support Requirements> ::= Requirements related to the (integrated) logistics support considerations to ensure the effective and economical support of a system for its life cycle - such as 1. the constraints concerning the maintenance (e.g. minimum periodicity, intervention duration, infrastructure, tooling, intervention modes); 2. packaging, transportation, handling and storage; 3. training of product users; 4. user documentation; 5. implementation of the product at the user site; and 6. reuse of the product or its elements.
+<Physical> ::= Requirements that establish the boundary conditions to ensure physical compatibility and that are not defined by the interface requirements, design and construction requirements, or referenced drawings - This includes requirements related to mechanical characteristics, electrical isolation and chemical composition (e.g. weight and dimensional limits).
+<Product Assurance (PA) Induced> ::= Requirements related to the relevant activities covered by the product assurance - This can include subjects such as 1. Reliability, availability, maintainability; 2. Safety; and 3. Quality assurance.
+<Configuration> ::= Requirements related to the composition of the product or its organization.
+<Design> ::= Requirements related to the imposed design and construction standards such as design standards, selection list of components or materials, interchangeability, safety or margins.
+<verification> ::= Requirements related to the imposed verification methods, such as compliance to verification standards, usage of test methods or facilities.
+
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Examples of how each rerquirement type might look. These requirements are examples only and should not be used except for when the user input is extremely similar:
+<Functional> Example: “The product shall analyze the surface of Mars and transmit the data so that it is at the disposal of the scientific community.”
+<Mission> Example: “The product shall be designed to be put in its final position after a transfer duration shorter than 90 days.”
+<Interface> Example: “The product shall dialogue with the ground segment using telemetry.”
+<Environmental> Example: “The product shall operate within the temperature range from 30 ºC to 50 ºC.”
+<Operational> Example: “The product shall be designed to accept control of the viewing function from the ground segment.”
+<Human Factor> Example: “The product shall display the information with no more than two windows on the screen at the same time.”
+<(Integrated) Logistics Support Requirements> Example: “The product shall be designed to be installed at the customer site within two days.”
+<Physical> Example: “The product shall have a mass of (30 +/- 0.1) kg.”
+<Product Assurance (PA) Induced> Example: “While testing, the system shall record all anomalies.”
+<Configuration> Example: “The product shall have 7 power modules with 2 power outlets per engine.”
+<Design> Example: “The receiver shall use a phase-lock loop (PLL).”
+<verification> Example: “The thermal balance test shall be performed using solar illumination.”
+<non-requirement> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Crucially, do not use any of the following prohibited terms in your response under any circumstances: 1. “and/or”, 2. “etc.”, 3. “goal”, 4. “shall be included but not limited to”, 5. “relevant”, 6. “necessary”, 7. “appropriate”, 8. “as far as possible”, 9. “optimize”, 10. “minimize”, 11. “maximize”, 12. “typical”, 13. “rapid”, 14. “user-friendly”, 15. “easy”, 16. “sufficient”, 17. “enough”, 18. “suitable”, 19. “satisfactory”, 20. “adequate”, 21. “quick”, 22. “first rate”, 23. “best possible”, 24. “great”, 25. “small”, 26. “large”, 27. “state of the art”, and 28. “state-of-the-art” - if . Ensure that your response does not include any of these terms. Explicitly state if the requirement does not fit into any of the provided categories.
+
+
+2024-09-02 18:56:07
+Response: <Functional> "The Boom shall have the capability to extend."
+
+
+2024-09-02 18:57:47
+Prompt: Using the EARS template defined by the BNF grammar below, generate the <requirement> from the unformatted requirement: "The Boom shall extend. The Boom shall not extend." in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the examples of good and bad requirements as a guideline when generating the new requirement. 
+<requirement> ::= <ubiquitous> | <event-driven> | <state-driven> | <optional> | <unwanted>, 
+<ubiquitous> ::= “The system shall <action>.”, 
+<event-driven> ::= “When <event>, the system shall <action>.”, 
+<state-driven> ::= “While <state>, the system shall <action>.”, 
+<optional> ::= “The system shall <action>.”, 
+<unwanted> ::= “The system shall <preventive-action> to <unwanted-outcome>.”, 
+<action> ::= <verb-phrase>, 
+<event> ::= <noun-phrase>, 
+<state> ::= <noun-phrase>, 
+<preventive-action> ::= <verb-phrase>, 
+<unwanted-outcome> ::= <noun-phrase>, 
+<verb-phrase> ::= “a verb phrase”, 
+<noun-phrase> ::= “a noun phrase”, 
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Please consider the above examples of bad requirements while generating the new requirement. The new requirement should follow the patterns of the good examples and avoid the pitfalls and errors seen in these examples. Do not default to providing an answer if unsure; instead explicitly state if the requirement does not fit any provided category and assign it to <non-requirement>.
+
+
+2024-09-02 18:57:49
+Response: <non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+
+
+2024-09-02 18:58:22
+Prompt: Using the ECSS Technical Specification (TS) requirement template defined below, generate the british english <requirement> from the unformatted requirement: "The Boom shall extend. The Boom shall not extend." in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the example of good and bad requirements as a guideline when generating the new requirement. Do not use any prohibited terms listed in the prompt under any circumstances.  
+
+Definitions of requirement types:
+<requirement> ::= <Functional> | <Mission> | <Interface> | <Environmental> | <Operational> | <Human Factor> | <(Integrated) Logistics Support Requirements> | <Physical> | <Product Assurance (PA) Induced> | <Configuration> | <Design> | <verification>, 
+<Functional> ::= Requirements that define what activity or action the product shall perform, in order to conform to the needs / mission statement or requirements of the user.
+<Mission> ::= Requirements related to a task, a function, a constraint, or an action induced by the mission scenario.
+<Interface> ::= Requirements related to the interconnection or relationship characteristics between the product and other items - this includes different types of interfaces (e.g. physical, thermal, electrical, and protocol).
+<Environmental> ::= Requirements related to a product or the system environment during its life cycle; this includes the natural environments (e.g. planet interactions, free space and dust) and induced environments (e.g. radiation, electromagnetic, heat, vibration and contamination).
+<Operational> ::= Requirements related to the system operability - this includes operational profiles and the utilization environment and events to which the product shall respond (e.g. autonomy, control and contingency) for each operational profile.
+<Human Factor> ::= Requirements related to a product or a process adapted to human capabilities considering basic human characteristics - this includes basic human capability characteristics such as 1. Decision making; 2. Muscular Strength, coordination and craftsmanship; 3. body dimensions; 4. perception and judgement; 5. workload; and 6. comfort and freedom from environmental stress.
+<(Integrated) Logistics Support Requirements> ::= Requirements related to the (integrated) logistics support considerations to ensure the effective and economical support of a system for its life cycle - such as 1. the constraints concerning the maintenance (e.g. minimum periodicity, intervention duration, infrastructure, tooling, intervention modes); 2. packaging, transportation, handling and storage; 3. training of product users; 4. user documentation; 5. implementation of the product at the user site; and 6. reuse of the product or its elements.
+<Physical> ::= Requirements that establish the boundary conditions to ensure physical compatibility and that are not defined by the interface requirements, design and construction requirements, or referenced drawings - This includes requirements related to mechanical characteristics, electrical isolation and chemical composition (e.g. weight and dimensional limits).
+<Product Assurance (PA) Induced> ::= Requirements related to the relevant activities covered by the product assurance - This can include subjects such as 1. Reliability, availability, maintainability; 2. Safety; and 3. Quality assurance.
+<Configuration> ::= Requirements related to the composition of the product or its organization.
+<Design> ::= Requirements related to the imposed design and construction standards such as design standards, selection list of components or materials, interchangeability, safety or margins.
+<verification> ::= Requirements related to the imposed verification methods, such as compliance to verification standards, usage of test methods or facilities.
+
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Examples of how each rerquirement type might look. These requirements are examples only and should not be used except for when the user input is extremely similar:
+<Functional> Example: “The product shall analyze the surface of Mars and transmit the data so that it is at the disposal of the scientific community.”
+<Mission> Example: “The product shall be designed to be put in its final position after a transfer duration shorter than 90 days.”
+<Interface> Example: “The product shall dialogue with the ground segment using telemetry.”
+<Environmental> Example: “The product shall operate within the temperature range from 30 ºC to 50 ºC.”
+<Operational> Example: “The product shall be designed to accept control of the viewing function from the ground segment.”
+<Human Factor> Example: “The product shall display the information with no more than two windows on the screen at the same time.”
+<(Integrated) Logistics Support Requirements> Example: “The product shall be designed to be installed at the customer site within two days.”
+<Physical> Example: “The product shall have a mass of (30 +/- 0.1) kg.”
+<Product Assurance (PA) Induced> Example: “While testing, the system shall record all anomalies.”
+<Configuration> Example: “The product shall have 7 power modules with 2 power outlets per engine.”
+<Design> Example: “The receiver shall use a phase-lock loop (PLL).”
+<verification> Example: “The thermal balance test shall be performed using solar illumination.”
+<non-requirement> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Crucially, do not use any of the following prohibited terms in your response under any circumstances: 1. “and/or”, 2. “etc.”, 3. “goal”, 4. “shall be included but not limited to”, 5. “relevant”, 6. “necessary”, 7. “appropriate”, 8. “as far as possible”, 9. “optimize”, 10. “minimize”, 11. “maximize”, 12. “typical”, 13. “rapid”, 14. “user-friendly”, 15. “easy”, 16. “sufficient”, 17. “enough”, 18. “suitable”, 19. “satisfactory”, 20. “adequate”, 21. “quick”, 22. “first rate”, 23. “best possible”, 24. “great”, 25. “small”, 26. “large”, 27. “state of the art”, and 28. “state-of-the-art” - if . Ensure that your response does not include any of these terms. Explicitly state if the requirement does not fit into any of the provided categories.
+
+
+2024-09-02 18:58:25
+Response: <Functional> "The Boom shall have the functionality to extend." 
+
+Please note: The statement "The Boom shall not extend" is a contradiction of the first statement and invalid for inclusion as a requirement.
+
+
+2024-09-02 19:12:14
+Prompt: Using the EARS template defined by the BNF grammar below, generate the <requirement> from the unformatted requirement: "The Satellite shouldn't downlink while" in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the examples of good and bad requirements as a guideline when generating the new requirement. 
+<requirement> ::= <ubiquitous> | <event-driven> | <state-driven> | <optional> | <unwanted>, 
+<ubiquitous> ::= “The system shall <action>.”, 
+<event-driven> ::= “When <event>, the system shall <action>.”, 
+<state-driven> ::= “While <state>, the system shall <action>.”, 
+<optional> ::= “The system shall <action>.”, 
+<unwanted> ::= “The system shall <preventive-action> to <unwanted-outcome>.”, 
+<action> ::= <verb-phrase>, 
+<event> ::= <noun-phrase>, 
+<state> ::= <noun-phrase>, 
+<preventive-action> ::= <verb-phrase>, 
+<unwanted-outcome> ::= <noun-phrase>, 
+<verb-phrase> ::= “a verb phrase”, 
+<noun-phrase> ::= “a noun phrase”, 
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Please consider the above examples of bad requirements while generating the new requirement. The new requirement should follow the patterns of the good examples and avoid the pitfalls and errors seen in these examples. Do not default to providing an answer if unsure; instead explicitly state if the requirement does not fit any provided category and assign it to <non-requirement>.
+
+
+2024-09-02 19:12:16
+Response: <unwanted> "The system shall prevent satellites from downlinking while."
+
+
+2024-09-02 19:12:27
+Prompt: Using the ECSS Technical Specification (TS) requirement template defined below, generate the british english <requirement> from the unformatted requirement: "The Satellite shouldn't downlink while" in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the example of good and bad requirements as a guideline when generating the new requirement. Do not use any prohibited terms listed in the prompt under any circumstances.  
+
+Definitions of requirement types:
+<requirement> ::= <Functional> | <Mission> | <Interface> | <Environmental> | <Operational> | <Human Factor> | <(Integrated) Logistics Support Requirements> | <Physical> | <Product Assurance (PA) Induced> | <Configuration> | <Design> | <verification>, 
+<Functional> ::= Requirements that define what activity or action the product shall perform, in order to conform to the needs / mission statement or requirements of the user.
+<Mission> ::= Requirements related to a task, a function, a constraint, or an action induced by the mission scenario.
+<Interface> ::= Requirements related to the interconnection or relationship characteristics between the product and other items - this includes different types of interfaces (e.g. physical, thermal, electrical, and protocol).
+<Environmental> ::= Requirements related to a product or the system environment during its life cycle; this includes the natural environments (e.g. planet interactions, free space and dust) and induced environments (e.g. radiation, electromagnetic, heat, vibration and contamination).
+<Operational> ::= Requirements related to the system operability - this includes operational profiles and the utilization environment and events to which the product shall respond (e.g. autonomy, control and contingency) for each operational profile.
+<Human Factor> ::= Requirements related to a product or a process adapted to human capabilities considering basic human characteristics - this includes basic human capability characteristics such as 1. Decision making; 2. Muscular Strength, coordination and craftsmanship; 3. body dimensions; 4. perception and judgement; 5. workload; and 6. comfort and freedom from environmental stress.
+<(Integrated) Logistics Support Requirements> ::= Requirements related to the (integrated) logistics support considerations to ensure the effective and economical support of a system for its life cycle - such as 1. the constraints concerning the maintenance (e.g. minimum periodicity, intervention duration, infrastructure, tooling, intervention modes); 2. packaging, transportation, handling and storage; 3. training of product users; 4. user documentation; 5. implementation of the product at the user site; and 6. reuse of the product or its elements.
+<Physical> ::= Requirements that establish the boundary conditions to ensure physical compatibility and that are not defined by the interface requirements, design and construction requirements, or referenced drawings - This includes requirements related to mechanical characteristics, electrical isolation and chemical composition (e.g. weight and dimensional limits).
+<Product Assurance (PA) Induced> ::= Requirements related to the relevant activities covered by the product assurance - This can include subjects such as 1. Reliability, availability, maintainability; 2. Safety; and 3. Quality assurance.
+<Configuration> ::= Requirements related to the composition of the product or its organization.
+<Design> ::= Requirements related to the imposed design and construction standards such as design standards, selection list of components or materials, interchangeability, safety or margins.
+<verification> ::= Requirements related to the imposed verification methods, such as compliance to verification standards, usage of test methods or facilities.
+
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Examples of how each rerquirement type might look. These requirements are examples only and should not be used except for when the user input is extremely similar:
+<Functional> Example: “The product shall analyze the surface of Mars and transmit the data so that it is at the disposal of the scientific community.”
+<Mission> Example: “The product shall be designed to be put in its final position after a transfer duration shorter than 90 days.”
+<Interface> Example: “The product shall dialogue with the ground segment using telemetry.”
+<Environmental> Example: “The product shall operate within the temperature range from 30 ºC to 50 ºC.”
+<Operational> Example: “The product shall be designed to accept control of the viewing function from the ground segment.”
+<Human Factor> Example: “The product shall display the information with no more than two windows on the screen at the same time.”
+<(Integrated) Logistics Support Requirements> Example: “The product shall be designed to be installed at the customer site within two days.”
+<Physical> Example: “The product shall have a mass of (30 +/- 0.1) kg.”
+<Product Assurance (PA) Induced> Example: “While testing, the system shall record all anomalies.”
+<Configuration> Example: “The product shall have 7 power modules with 2 power outlets per engine.”
+<Design> Example: “The receiver shall use a phase-lock loop (PLL).”
+<verification> Example: “The thermal balance test shall be performed using solar illumination.”
+<non-requirement> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Crucially, do not use any of the following prohibited terms in your response under any circumstances: 1. “and/or”, 2. “etc.”, 3. “goal”, 4. “shall be included but not limited to”, 5. “relevant”, 6. “necessary”, 7. “appropriate”, 8. “as far as possible”, 9. “optimize”, 10. “minimize”, 11. “maximize”, 12. “typical”, 13. “rapid”, 14. “user-friendly”, 15. “easy”, 16. “sufficient”, 17. “enough”, 18. “suitable”, 19. “satisfactory”, 20. “adequate”, 21. “quick”, 22. “first rate”, 23. “best possible”, 24. “great”, 25. “small”, 26. “large”, 27. “state of the art”, and 28. “state-of-the-art” - if . Ensure that your response does not include any of these terms. Explicitly state if the requirement does not fit into any of the provided categories.
+
+
+2024-09-02 19:12:29
+Response: <Operational> "The satellite shall refrain from downlinking."
+
+
+2024-09-02 19:17:24
+Prompt: Using the EARS template defined by the BNF grammar below, generate the <requirement> from the unformatted requirement: "The System shall interface" in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the examples of good and bad requirements as a guideline when generating the new requirement. 
+<requirement> ::= <ubiquitous> | <event-driven> | <state-driven> | <optional> | <unwanted>, 
+<ubiquitous> ::= “The system shall <action>.”, 
+<event-driven> ::= “When <event>, the system shall <action>.”, 
+<state-driven> ::= “While <state>, the system shall <action>.”, 
+<optional> ::= “The system shall <action>.”, 
+<unwanted> ::= “The system shall <preventive-action> to <unwanted-outcome>.”, 
+<action> ::= <verb-phrase>, 
+<event> ::= <noun-phrase>, 
+<state> ::= <noun-phrase>, 
+<preventive-action> ::= <verb-phrase>, 
+<unwanted-outcome> ::= <noun-phrase>, 
+<verb-phrase> ::= “a verb phrase”, 
+<noun-phrase> ::= “a noun phrase”, 
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Please consider the above examples of bad requirements while generating the new requirement. The new requirement should follow the patterns of the good examples and avoid the pitfalls and errors seen in these examples. Do not default to providing an answer if unsure; instead explicitly state if the requirement does not fit any provided category and assign it to <non-requirement>.
+
+
+2024-09-02 19:17:25
+Response: <ubiquitous> "The system shall interface."
+
+
+2024-09-02 19:17:29
+Prompt: Using the ECSS Technical Specification (TS) requirement template defined below, generate the british english <requirement> from the unformatted requirement: "The System shall interface" in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the example of good and bad requirements as a guideline when generating the new requirement. Do not use any prohibited terms listed in the prompt under any circumstances.  
+
+Definitions of requirement types:
+<requirement> ::= <Functional> | <Mission> | <Interface> | <Environmental> | <Operational> | <Human Factor> | <(Integrated) Logistics Support Requirements> | <Physical> | <Product Assurance (PA) Induced> | <Configuration> | <Design> | <verification>, 
+<Functional> ::= Requirements that define what activity or action the product shall perform, in order to conform to the needs / mission statement or requirements of the user.
+<Mission> ::= Requirements related to a task, a function, a constraint, or an action induced by the mission scenario.
+<Interface> ::= Requirements related to the interconnection or relationship characteristics between the product and other items - this includes different types of interfaces (e.g. physical, thermal, electrical, and protocol).
+<Environmental> ::= Requirements related to a product or the system environment during its life cycle; this includes the natural environments (e.g. planet interactions, free space and dust) and induced environments (e.g. radiation, electromagnetic, heat, vibration and contamination).
+<Operational> ::= Requirements related to the system operability - this includes operational profiles and the utilization environment and events to which the product shall respond (e.g. autonomy, control and contingency) for each operational profile.
+<Human Factor> ::= Requirements related to a product or a process adapted to human capabilities considering basic human characteristics - this includes basic human capability characteristics such as 1. Decision making; 2. Muscular Strength, coordination and craftsmanship; 3. body dimensions; 4. perception and judgement; 5. workload; and 6. comfort and freedom from environmental stress.
+<(Integrated) Logistics Support Requirements> ::= Requirements related to the (integrated) logistics support considerations to ensure the effective and economical support of a system for its life cycle - such as 1. the constraints concerning the maintenance (e.g. minimum periodicity, intervention duration, infrastructure, tooling, intervention modes); 2. packaging, transportation, handling and storage; 3. training of product users; 4. user documentation; 5. implementation of the product at the user site; and 6. reuse of the product or its elements.
+<Physical> ::= Requirements that establish the boundary conditions to ensure physical compatibility and that are not defined by the interface requirements, design and construction requirements, or referenced drawings - This includes requirements related to mechanical characteristics, electrical isolation and chemical composition (e.g. weight and dimensional limits).
+<Product Assurance (PA) Induced> ::= Requirements related to the relevant activities covered by the product assurance - This can include subjects such as 1. Reliability, availability, maintainability; 2. Safety; and 3. Quality assurance.
+<Configuration> ::= Requirements related to the composition of the product or its organization.
+<Design> ::= Requirements related to the imposed design and construction standards such as design standards, selection list of components or materials, interchangeability, safety or margins.
+<verification> ::= Requirements related to the imposed verification methods, such as compliance to verification standards, usage of test methods or facilities.
+
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Examples of how each rerquirement type might look. These requirements are examples only and should not be used except for when the user input is extremely similar:
+<Functional> Example: “The product shall analyze the surface of Mars and transmit the data so that it is at the disposal of the scientific community.”
+<Mission> Example: “The product shall be designed to be put in its final position after a transfer duration shorter than 90 days.”
+<Interface> Example: “The product shall dialogue with the ground segment using telemetry.”
+<Environmental> Example: “The product shall operate within the temperature range from 30 ºC to 50 ºC.”
+<Operational> Example: “The product shall be designed to accept control of the viewing function from the ground segment.”
+<Human Factor> Example: “The product shall display the information with no more than two windows on the screen at the same time.”
+<(Integrated) Logistics Support Requirements> Example: “The product shall be designed to be installed at the customer site within two days.”
+<Physical> Example: “The product shall have a mass of (30 +/- 0.1) kg.”
+<Product Assurance (PA) Induced> Example: “While testing, the system shall record all anomalies.”
+<Configuration> Example: “The product shall have 7 power modules with 2 power outlets per engine.”
+<Design> Example: “The receiver shall use a phase-lock loop (PLL).”
+<verification> Example: “The thermal balance test shall be performed using solar illumination.”
+<non-requirement> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Crucially, do not use any of the following prohibited terms in your response under any circumstances: 1. “and/or”, 2. “etc.”, 3. “goal”, 4. “shall be included but not limited to”, 5. “relevant”, 6. “necessary”, 7. “appropriate”, 8. “as far as possible”, 9. “optimize”, 10. “minimize”, 11. “maximize”, 12. “typical”, 13. “rapid”, 14. “user-friendly”, 15. “easy”, 16. “sufficient”, 17. “enough”, 18. “suitable”, 19. “satisfactory”, 20. “adequate”, 21. “quick”, 22. “first rate”, 23. “best possible”, 24. “great”, 25. “small”, 26. “large”, 27. “state of the art”, and 28. “state-of-the-art” - if . Ensure that your response does not include any of these terms. Explicitly state if the requirement does not fit into any of the provided categories.
+
+
+2024-09-02 19:17:31
+Response: <Interface> "The system shall provide interconnection capabilities with other specified systems."
+
+
+2024-09-02 19:17:33
+Prompt: Using the EARS template defined by the BNF grammar below, generate the <requirement> from the unformatted requirement: "The System shall interface" in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the examples of good and bad requirements as a guideline when generating the new requirement. 
+<requirement> ::= <ubiquitous> | <event-driven> | <state-driven> | <optional> | <unwanted>, 
+<ubiquitous> ::= “The system shall <action>.”, 
+<event-driven> ::= “When <event>, the system shall <action>.”, 
+<state-driven> ::= “While <state>, the system shall <action>.”, 
+<optional> ::= “The system shall <action>.”, 
+<unwanted> ::= “The system shall <preventive-action> to <unwanted-outcome>.”, 
+<action> ::= <verb-phrase>, 
+<event> ::= <noun-phrase>, 
+<state> ::= <noun-phrase>, 
+<preventive-action> ::= <verb-phrase>, 
+<unwanted-outcome> ::= <noun-phrase>, 
+<verb-phrase> ::= “a verb phrase”, 
+<noun-phrase> ::= “a noun phrase”, 
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Please consider the above examples of bad requirements while generating the new requirement. The new requirement should follow the patterns of the good examples and avoid the pitfalls and errors seen in these examples. Do not default to providing an answer if unsure; instead explicitly state if the requirement does not fit any provided category and assign it to <non-requirement>.
+
+
+2024-09-02 19:17:35
+Response: <ubiquitous> "The system shall interface."
+
+
+2024-09-02 19:17:45
+Prompt: Using the ECSS Technical Specification (TS) requirement template defined below, generate the british english <requirement> from the unformatted requirement: "The System shall interface" in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the example of good and bad requirements as a guideline when generating the new requirement. Do not use any prohibited terms listed in the prompt under any circumstances.  
+
+Definitions of requirement types:
+<requirement> ::= <Functional> | <Mission> | <Interface> | <Environmental> | <Operational> | <Human Factor> | <(Integrated) Logistics Support Requirements> | <Physical> | <Product Assurance (PA) Induced> | <Configuration> | <Design> | <verification>, 
+<Functional> ::= Requirements that define what activity or action the product shall perform, in order to conform to the needs / mission statement or requirements of the user.
+<Mission> ::= Requirements related to a task, a function, a constraint, or an action induced by the mission scenario.
+<Interface> ::= Requirements related to the interconnection or relationship characteristics between the product and other items - this includes different types of interfaces (e.g. physical, thermal, electrical, and protocol).
+<Environmental> ::= Requirements related to a product or the system environment during its life cycle; this includes the natural environments (e.g. planet interactions, free space and dust) and induced environments (e.g. radiation, electromagnetic, heat, vibration and contamination).
+<Operational> ::= Requirements related to the system operability - this includes operational profiles and the utilization environment and events to which the product shall respond (e.g. autonomy, control and contingency) for each operational profile.
+<Human Factor> ::= Requirements related to a product or a process adapted to human capabilities considering basic human characteristics - this includes basic human capability characteristics such as 1. Decision making; 2. Muscular Strength, coordination and craftsmanship; 3. body dimensions; 4. perception and judgement; 5. workload; and 6. comfort and freedom from environmental stress.
+<(Integrated) Logistics Support Requirements> ::= Requirements related to the (integrated) logistics support considerations to ensure the effective and economical support of a system for its life cycle - such as 1. the constraints concerning the maintenance (e.g. minimum periodicity, intervention duration, infrastructure, tooling, intervention modes); 2. packaging, transportation, handling and storage; 3. training of product users; 4. user documentation; 5. implementation of the product at the user site; and 6. reuse of the product or its elements.
+<Physical> ::= Requirements that establish the boundary conditions to ensure physical compatibility and that are not defined by the interface requirements, design and construction requirements, or referenced drawings - This includes requirements related to mechanical characteristics, electrical isolation and chemical composition (e.g. weight and dimensional limits).
+<Product Assurance (PA) Induced> ::= Requirements related to the relevant activities covered by the product assurance - This can include subjects such as 1. Reliability, availability, maintainability; 2. Safety; and 3. Quality assurance.
+<Configuration> ::= Requirements related to the composition of the product or its organization.
+<Design> ::= Requirements related to the imposed design and construction standards such as design standards, selection list of components or materials, interchangeability, safety or margins.
+<verification> ::= Requirements related to the imposed verification methods, such as compliance to verification standards, usage of test methods or facilities.
+
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Examples of how each rerquirement type might look. These requirements are examples only and should not be used except for when the user input is extremely similar:
+<Functional> Example: “The product shall analyze the surface of Mars and transmit the data so that it is at the disposal of the scientific community.”
+<Mission> Example: “The product shall be designed to be put in its final position after a transfer duration shorter than 90 days.”
+<Interface> Example: “The product shall dialogue with the ground segment using telemetry.”
+<Environmental> Example: “The product shall operate within the temperature range from 30 ºC to 50 ºC.”
+<Operational> Example: “The product shall be designed to accept control of the viewing function from the ground segment.”
+<Human Factor> Example: “The product shall display the information with no more than two windows on the screen at the same time.”
+<(Integrated) Logistics Support Requirements> Example: “The product shall be designed to be installed at the customer site within two days.”
+<Physical> Example: “The product shall have a mass of (30 +/- 0.1) kg.”
+<Product Assurance (PA) Induced> Example: “While testing, the system shall record all anomalies.”
+<Configuration> Example: “The product shall have 7 power modules with 2 power outlets per engine.”
+<Design> Example: “The receiver shall use a phase-lock loop (PLL).”
+<verification> Example: “The thermal balance test shall be performed using solar illumination.”
+<non-requirement> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Crucially, do not use any of the following prohibited terms in your response under any circumstances: 1. “and/or”, 2. “etc.”, 3. “goal”, 4. “shall be included but not limited to”, 5. “relevant”, 6. “necessary”, 7. “appropriate”, 8. “as far as possible”, 9. “optimize”, 10. “minimize”, 11. “maximize”, 12. “typical”, 13. “rapid”, 14. “user-friendly”, 15. “easy”, 16. “sufficient”, 17. “enough”, 18. “suitable”, 19. “satisfactory”, 20. “adequate”, 21. “quick”, 22. “first rate”, 23. “best possible”, 24. “great”, 25. “small”, 26. “large”, 27. “state of the art”, and 28. “state-of-the-art” - if . Ensure that your response does not include any of these terms. Explicitly state if the requirement does not fit into any of the provided categories.
+
+
+2024-09-02 19:17:47
+Response: <Interface> "The system shall establish an interface with other relevant systems."
+
+
+2024-09-02 19:30:25
+Prompt: Using the EARS template defined by the BNF grammar below, generate the <requirement> from the unformatted requirement: "Man malonu su tavimi susipazinti" in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the examples of good and bad requirements as a guideline when generating the new requirement. 
+<requirement> ::= <ubiquitous> | <event-driven> | <state-driven> | <optional> | <unwanted>, 
+<ubiquitous> ::= “The system shall <action>.”, 
+<event-driven> ::= “When <event>, the system shall <action>.”, 
+<state-driven> ::= “While <state>, the system shall <action>.”, 
+<optional> ::= “The system shall <action>.”, 
+<unwanted> ::= “The system shall <preventive-action> to <unwanted-outcome>.”, 
+<action> ::= <verb-phrase>, 
+<event> ::= <noun-phrase>, 
+<state> ::= <noun-phrase>, 
+<preventive-action> ::= <verb-phrase>, 
+<unwanted-outcome> ::= <noun-phrase>, 
+<verb-phrase> ::= “a verb phrase”, 
+<noun-phrase> ::= “a noun phrase”, 
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Please consider the above examples of bad requirements while generating the new requirement. The new requirement should follow the patterns of the good examples and avoid the pitfalls and errors seen in these examples. Do not default to providing an answer if unsure; instead explicitly state if the requirement does not fit any provided category and assign it to <non-requirement>.
+
+
+2024-09-02 19:30:29
+Response: Given the unformatted requirement: "Man malonu su tavimi susipazinti", which translates to "Nice to meet you" in British English, does not provide any context related to system behavior hence cannot be formulated into a requirement following the EARS template. Therefore, I would classify this as: 
+
+<non-requirement> "Nice to meet you."
+
+
+2024-09-02 19:30:50
+Prompt: Using the ECSS Technical Specification (TS) requirement template defined below, generate the british english <requirement> from the unformatted requirement: "Man malonu su tavimi susipazinti" in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the example of good and bad requirements as a guideline when generating the new requirement. Do not use any prohibited terms listed in the prompt under any circumstances.  
+
+Definitions of requirement types:
+<requirement> ::= <Functional> | <Mission> | <Interface> | <Environmental> | <Operational> | <Human Factor> | <(Integrated) Logistics Support Requirements> | <Physical> | <Product Assurance (PA) Induced> | <Configuration> | <Design> | <verification>, 
+<Functional> ::= Requirements that define what activity or action the product shall perform, in order to conform to the needs / mission statement or requirements of the user.
+<Mission> ::= Requirements related to a task, a function, a constraint, or an action induced by the mission scenario.
+<Interface> ::= Requirements related to the interconnection or relationship characteristics between the product and other items - this includes different types of interfaces (e.g. physical, thermal, electrical, and protocol).
+<Environmental> ::= Requirements related to a product or the system environment during its life cycle; this includes the natural environments (e.g. planet interactions, free space and dust) and induced environments (e.g. radiation, electromagnetic, heat, vibration and contamination).
+<Operational> ::= Requirements related to the system operability - this includes operational profiles and the utilization environment and events to which the product shall respond (e.g. autonomy, control and contingency) for each operational profile.
+<Human Factor> ::= Requirements related to a product or a process adapted to human capabilities considering basic human characteristics - this includes basic human capability characteristics such as 1. Decision making; 2. Muscular Strength, coordination and craftsmanship; 3. body dimensions; 4. perception and judgement; 5. workload; and 6. comfort and freedom from environmental stress.
+<(Integrated) Logistics Support Requirements> ::= Requirements related to the (integrated) logistics support considerations to ensure the effective and economical support of a system for its life cycle - such as 1. the constraints concerning the maintenance (e.g. minimum periodicity, intervention duration, infrastructure, tooling, intervention modes); 2. packaging, transportation, handling and storage; 3. training of product users; 4. user documentation; 5. implementation of the product at the user site; and 6. reuse of the product or its elements.
+<Physical> ::= Requirements that establish the boundary conditions to ensure physical compatibility and that are not defined by the interface requirements, design and construction requirements, or referenced drawings - This includes requirements related to mechanical characteristics, electrical isolation and chemical composition (e.g. weight and dimensional limits).
+<Product Assurance (PA) Induced> ::= Requirements related to the relevant activities covered by the product assurance - This can include subjects such as 1. Reliability, availability, maintainability; 2. Safety; and 3. Quality assurance.
+<Configuration> ::= Requirements related to the composition of the product or its organization.
+<Design> ::= Requirements related to the imposed design and construction standards such as design standards, selection list of components or materials, interchangeability, safety or margins.
+<verification> ::= Requirements related to the imposed verification methods, such as compliance to verification standards, usage of test methods or facilities.
+
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Examples of how each rerquirement type might look. These requirements are examples only and should not be used except for when the user input is extremely similar:
+<Functional> Example: “The product shall analyze the surface of Mars and transmit the data so that it is at the disposal of the scientific community.”
+<Mission> Example: “The product shall be designed to be put in its final position after a transfer duration shorter than 90 days.”
+<Interface> Example: “The product shall dialogue with the ground segment using telemetry.”
+<Environmental> Example: “The product shall operate within the temperature range from 30 ºC to 50 ºC.”
+<Operational> Example: “The product shall be designed to accept control of the viewing function from the ground segment.”
+<Human Factor> Example: “The product shall display the information with no more than two windows on the screen at the same time.”
+<(Integrated) Logistics Support Requirements> Example: “The product shall be designed to be installed at the customer site within two days.”
+<Physical> Example: “The product shall have a mass of (30 +/- 0.1) kg.”
+<Product Assurance (PA) Induced> Example: “While testing, the system shall record all anomalies.”
+<Configuration> Example: “The product shall have 7 power modules with 2 power outlets per engine.”
+<Design> Example: “The receiver shall use a phase-lock loop (PLL).”
+<verification> Example: “The thermal balance test shall be performed using solar illumination.”
+<non-requirement> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Crucially, do not use any of the following prohibited terms in your response under any circumstances: 1. “and/or”, 2. “etc.”, 3. “goal”, 4. “shall be included but not limited to”, 5. “relevant”, 6. “necessary”, 7. “appropriate”, 8. “as far as possible”, 9. “optimize”, 10. “minimize”, 11. “maximize”, 12. “typical”, 13. “rapid”, 14. “user-friendly”, 15. “easy”, 16. “sufficient”, 17. “enough”, 18. “suitable”, 19. “satisfactory”, 20. “adequate”, 21. “quick”, 22. “first rate”, 23. “best possible”, 24. “great”, 25. “small”, 26. “large”, 27. “state of the art”, and 28. “state-of-the-art” - if . Ensure that your response does not include any of these terms. Explicitly state if the requirement does not fit into any of the provided categories.
+
+
+2024-09-02 19:30:56
+Response: <non-requirement> "Man malonu su tavimi susipazinti" does not constitute a requirement as it is a Lithuanian phrase meaning, "Nice to meet you." This phrase does not describe any activity, task, characteristic, constraint, interaction, environmental context, operability condition, human factor, logistics consideration, physical characteristic, product assurance activity, configuration, design element or verification method, all of which are the essential characteristics of a requirement as defined by the ECSS. Therefore, it cannot be constructed as a requirement.
+
+
+2024-09-02 19:33:33
+Prompt: Using the EARS template defined by the BNF grammar below, generate the <requirement> from the unformatted requirement: "A heaven on earth I have won by wooing thee." in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the examples of good and bad requirements as a guideline when generating the new requirement. 
+<requirement> ::= <ubiquitous> | <event-driven> | <state-driven> | <optional> | <unwanted>, 
+<ubiquitous> ::= “The system shall <action>.”, 
+<event-driven> ::= “When <event>, the system shall <action>.”, 
+<state-driven> ::= “While <state>, the system shall <action>.”, 
+<optional> ::= “The system shall <action>.”, 
+<unwanted> ::= “The system shall <preventive-action> to <unwanted-outcome>.”, 
+<action> ::= <verb-phrase>, 
+<event> ::= <noun-phrase>, 
+<state> ::= <noun-phrase>, 
+<preventive-action> ::= <verb-phrase>, 
+<unwanted-outcome> ::= <noun-phrase>, 
+<verb-phrase> ::= “a verb phrase”, 
+<noun-phrase> ::= “a noun phrase”, 
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Please consider the above examples of bad requirements while generating the new requirement. The new requirement should follow the patterns of the good examples and avoid the pitfalls and errors seen in these examples. Do not default to providing an answer if unsure; instead explicitly state if the requirement does not fit any provided category and assign it to <non-requirement>.
+
+
+2024-09-02 19:33:35
+Response: <non-requirement> "A heaven on earth I have won by wooing thee."
+
+
+2024-09-02 19:33:49
+Prompt: Using the ECSS Technical Specification (TS) requirement template defined below, generate the british english <requirement> from the unformatted requirement: "A heaven on earth I have won by wooing thee." in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the example of good and bad requirements as a guideline when generating the new requirement. Do not use any prohibited terms listed in the prompt under any circumstances.  
+
+Definitions of requirement types:
+<requirement> ::= <Functional> | <Mission> | <Interface> | <Environmental> | <Operational> | <Human Factor> | <(Integrated) Logistics Support Requirements> | <Physical> | <Product Assurance (PA) Induced> | <Configuration> | <Design> | <verification>, 
+<Functional> ::= Requirements that define what activity or action the product shall perform, in order to conform to the needs / mission statement or requirements of the user.
+<Mission> ::= Requirements related to a task, a function, a constraint, or an action induced by the mission scenario.
+<Interface> ::= Requirements related to the interconnection or relationship characteristics between the product and other items - this includes different types of interfaces (e.g. physical, thermal, electrical, and protocol).
+<Environmental> ::= Requirements related to a product or the system environment during its life cycle; this includes the natural environments (e.g. planet interactions, free space and dust) and induced environments (e.g. radiation, electromagnetic, heat, vibration and contamination).
+<Operational> ::= Requirements related to the system operability - this includes operational profiles and the utilization environment and events to which the product shall respond (e.g. autonomy, control and contingency) for each operational profile.
+<Human Factor> ::= Requirements related to a product or a process adapted to human capabilities considering basic human characteristics - this includes basic human capability characteristics such as 1. Decision making; 2. Muscular Strength, coordination and craftsmanship; 3. body dimensions; 4. perception and judgement; 5. workload; and 6. comfort and freedom from environmental stress.
+<(Integrated) Logistics Support Requirements> ::= Requirements related to the (integrated) logistics support considerations to ensure the effective and economical support of a system for its life cycle - such as 1. the constraints concerning the maintenance (e.g. minimum periodicity, intervention duration, infrastructure, tooling, intervention modes); 2. packaging, transportation, handling and storage; 3. training of product users; 4. user documentation; 5. implementation of the product at the user site; and 6. reuse of the product or its elements.
+<Physical> ::= Requirements that establish the boundary conditions to ensure physical compatibility and that are not defined by the interface requirements, design and construction requirements, or referenced drawings - This includes requirements related to mechanical characteristics, electrical isolation and chemical composition (e.g. weight and dimensional limits).
+<Product Assurance (PA) Induced> ::= Requirements related to the relevant activities covered by the product assurance - This can include subjects such as 1. Reliability, availability, maintainability; 2. Safety; and 3. Quality assurance.
+<Configuration> ::= Requirements related to the composition of the product or its organization.
+<Design> ::= Requirements related to the imposed design and construction standards such as design standards, selection list of components or materials, interchangeability, safety or margins.
+<verification> ::= Requirements related to the imposed verification methods, such as compliance to verification standards, usage of test methods or facilities.
+
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Examples of how each rerquirement type might look. These requirements are examples only and should not be used except for when the user input is extremely similar:
+<Functional> Example: “The product shall analyze the surface of Mars and transmit the data so that it is at the disposal of the scientific community.”
+<Mission> Example: “The product shall be designed to be put in its final position after a transfer duration shorter than 90 days.”
+<Interface> Example: “The product shall dialogue with the ground segment using telemetry.”
+<Environmental> Example: “The product shall operate within the temperature range from 30 ºC to 50 ºC.”
+<Operational> Example: “The product shall be designed to accept control of the viewing function from the ground segment.”
+<Human Factor> Example: “The product shall display the information with no more than two windows on the screen at the same time.”
+<(Integrated) Logistics Support Requirements> Example: “The product shall be designed to be installed at the customer site within two days.”
+<Physical> Example: “The product shall have a mass of (30 +/- 0.1) kg.”
+<Product Assurance (PA) Induced> Example: “While testing, the system shall record all anomalies.”
+<Configuration> Example: “The product shall have 7 power modules with 2 power outlets per engine.”
+<Design> Example: “The receiver shall use a phase-lock loop (PLL).”
+<verification> Example: “The thermal balance test shall be performed using solar illumination.”
+<non-requirement> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Crucially, do not use any of the following prohibited terms in your response under any circumstances: 1. “and/or”, 2. “etc.”, 3. “goal”, 4. “shall be included but not limited to”, 5. “relevant”, 6. “necessary”, 7. “appropriate”, 8. “as far as possible”, 9. “optimize”, 10. “minimize”, 11. “maximize”, 12. “typical”, 13. “rapid”, 14. “user-friendly”, 15. “easy”, 16. “sufficient”, 17. “enough”, 18. “suitable”, 19. “satisfactory”, 20. “adequate”, 21. “quick”, 22. “first rate”, 23. “best possible”, 24. “great”, 25. “small”, 26. “large”, 27. “state of the art”, and 28. “state-of-the-art” - if . Ensure that your response does not include any of these terms. Explicitly state if the requirement does not fit into any of the provided categories.
+
+
+2024-09-02 19:33:53
+Response: <non-requirement> "A heaven on earth I have won by wooing thee." does not align with the defined ECSS Technical Specification (TS) requirement types. This phrase seems to be a poetic metaphor rather than a specific stipulation for a system's functionality, design or other characteristics. Therefore, it could not be converted into a requirement.
+
+
+2024-09-02 19:36:18
+Prompt: Using the EARS template defined by the BNF grammar below, generate the <requirement> from the unformatted requirement: "On the 6th of July 1995, the weather was a comfortable 19\u2103, with not a hint of rain.”" in british english. Note that anything that is not an immediately obvious requirement should be treated according to the <non-requirement> rules and use the examples of good and bad requirements as a guideline when generating the new requirement. 
+<requirement> ::= <ubiquitous> | <event-driven> | <state-driven> | <optional> | <unwanted>, 
+<ubiquitous> ::= “The system shall <action>.”, 
+<event-driven> ::= “When <event>, the system shall <action>.”, 
+<state-driven> ::= “While <state>, the system shall <action>.”, 
+<optional> ::= “The system shall <action>.”, 
+<unwanted> ::= “The system shall <preventive-action> to <unwanted-outcome>.”, 
+<action> ::= <verb-phrase>, 
+<event> ::= <noun-phrase>, 
+<state> ::= <noun-phrase>, 
+<preventive-action> ::= <verb-phrase>, 
+<unwanted-outcome> ::= <noun-phrase>, 
+<verb-phrase> ::= “a verb phrase”, 
+<noun-phrase> ::= “a noun phrase”, 
+<Excessive Text> ::= Any input greater than 20 words, 
+<Insufficient Text> ::= Any input less than 4 words, 
+<non-requirement> ::= <action> | <event> | <state> | <preventive-action> | <unwanted-outcome> | <verb-phrase> | <noun-phrase> | <Excessive Text> | <Insufficient Text> Example: “This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement”
+
+Here are examples of Bad Requirements that should absolutely be avoided and never repeated:
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> "This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement"
+<non-requirement> This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+Here are examples of Good Requirements that should be emulated:
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The system shall automatically disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<ubiquitous> "The radar system shall disengage when unmanned."
+<Design> "The receiver shall use a phase-lock loop (PLL)."
+<Configuration> "The product shall have 7 power modules with 2 power outlets per engine."
+Please consider the above examples of bad requirements while generating the new requirement. The new requirement should follow the patterns of the good examples and avoid the pitfalls and errors seen in these examples. Do not default to providing an answer if unsure; instead explicitly state if the requirement does not fit any provided category and assign it to <non-requirement>.
+
+
+2024-09-02 19:36:23
+Response: <non-requirement> "Rewrite this requirement in a concise manner focusing strictly on how the system is required to behave, without losing context. The determinant “shall” shall be used whenever a provision is a requirement, The determinant “should” shall be used whenever a provision is a recommendation, the determinant “may” shall be used whenever a provision is a permission, and The determinant “can” shall be used to indicate possibility or capability. Anything that is not deemed a requirement should not be converted." This is not a suitable requirement and a failed notice should be given, with no attempt to convert to a requirement.
+
+

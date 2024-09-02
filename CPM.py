@@ -19,7 +19,7 @@ def Comparative_Parsing_Module(User_Input):
     grammar = nltk.CFG.fromstring("""
     S -> NP VP | STA NP VP
     NP -> NN | NN NN | DT NN | DT NN PP | NN CD
-    VP -> VB NP | VB NP PP | MD VP | MD VB P DT NN
+    VP -> VB NP | VB NP PP | MD VP | MD VB P NP | P NP
     STA -> P EX VBZ DT NN P DT NN SYM | P EX VBZ DT NN SYM | P 
     PP -> P NP
     CC -> "for" | "and" | "nor" | "but" | "or" | "yet" | "so"
@@ -33,8 +33,8 @@ def Comparative_Parsing_Module(User_Input):
     JJS -> "Largest"
     LS -> 
     MD -> "can" | "cannot" | "could" | "couldn't" | "dare" | "may" | "might" | "must" | "need" | "ought" | "shall" | "should" | "shouldn't" | "will" | "would"                             
-    NN -> "system" | "subsystem" | "order" | "card" | "atm" | "Radar" | "Satellite" | "Ground Station"
-    VB -> "execute" | "interface" | "be" | "uplink" | "downlink" | "communicate"
+    NN -> "system" | "subsystem" | "order" | "card" | "atm" | "radar" | "satellite" | "groundstation" | "boom" | "conflict"
+    VB -> "execute" | "interface" | "be" | "uplink" | "extend" | "downlink" | "communicate" 
     VBZ -> "is" | "are"
     SYM -> "!" | "(" | ")" | '"' | "'" | "£" | "$" | "%" | "^" | "&" | "*" | "-" | "_" | "+"  | "=" | "[" | "]" | "{" | "}" | "~" | "#" | ":" | "?" | "." | ","
     """)
